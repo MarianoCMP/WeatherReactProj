@@ -7,31 +7,29 @@ import { BrowserRouter,
   Routes,
   Route
 } from 'react-router-dom';
-import AboutMe from './components/AboutMe';
-import Home from './components/Home';
-import Projects from './components/Projects';
+//import Home from './components/Home';
+
+import Weather from './components/Weather';
+import Home from './components/Home'
 
 
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
+
+
+      <Route path = "/" element = {<Weather/>} >
         
-        < Route path="" element={<App />} >
-
-        <Route path = "Home" element= {<Home/>} />
-
-        < Route path="Projects" element={<Projects />} >
-
-         < Route path="VideoGame" element={<VideoGame/>} />
-        < Route path = "SoloVideoGame" element={<SoloVideoGame/>}/>
-        <Route path = "MobileApp" element = {< MobileApp/>} />
+        < Route path="/WeatherApp" element={<App />} />
         
-        </Route> 
+        <Route path = "/Home" element={<Home/> } />
 
-        < Route path="ContactMe" element={<ContactMe />} />
+        {/* <Route path = "Home" element= {<Home/>} /> */}
 
-        < Route path = "AboutMe" element = {<AboutMe/>} />
+        {/* < Route path="WeatherApp" element={<Weather />} /> */}
+
+      
     
         </Route>
         </Routes>
