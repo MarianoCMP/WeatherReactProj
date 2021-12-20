@@ -19,11 +19,11 @@ ReactDOM.render(
     <Routes>
 
 
-      <Route path = "/" element = {<Weather/>} >
+      <Route path = "" element = {<Weather/>} >
         
-        < Route path="/WeatherApp" element={<App />} />
+        < Route path="WeatherApp" element={<App />} />
         
-        <Route path = "/Home" element={<Home/> } />
+        <Route path = "Home" element={<Home/> } />
 
         {/* <Route path = "Home" element= {<Home/>} /> */}
 
