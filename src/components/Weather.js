@@ -4,13 +4,9 @@ import {
    Outlet, Link
   } from "react-router-dom";
 
-
-
 function Weather() {
-
      return (
          <div>
-
              <h1>Welcome to the Weather App!</h1>
 
              <nav>

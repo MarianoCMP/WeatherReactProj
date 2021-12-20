@@ -5,7 +5,6 @@ function Home() {
 
     return (
 
-
         <div className="background" >
             <main>
         <div className="homepage">
@@ -30,13 +29,9 @@ function Home() {
                     <h3 style={{color: 'greenyellow'}}> 
                         Click the link above called "Weather App" and test its power
                     </h3>
-
-
-
-            </div>
-
+                </div>
             </main>
-            </div>
+        </div>
     );
     
 }

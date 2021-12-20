@@ -3,8 +3,6 @@ import { useState } from 'react';
 
 
 
-
-
   const api = {
     key: "5816b06f09fef7a89c2fb77399b2e021",
     base: "https://api.openweathermap.org/data/2.5/"
@@ -27,7 +25,9 @@ import { useState } from 'react';
     }
   
       const dateBuilder = (d) => {
-          let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        let months = ["January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"];
+        
           let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   
           let day = days[d.getDay()];
@@ -42,32 +42,48 @@ import { useState } from 'react';
             <main>
               <div className="search-box">
                 <input 
-                  type="text"
-                  className="search-bar"
-                  placeholder="Limited search due to free API..."
-                  onChange={e => setQuery(e.target.value)}
+                type="text"
+                
+                className="search-bar"
+                
+                placeholder="Limited search due to free API..."
+                
+                onChange={e => setQuery(e.target.value)}
+                
                   value={query}
                   onKeyPress={search}
-                />
+              />
+              
               </div>
               {(typeof weather.main != "undefined") ? (
               <div>
                 <div className="location-box">
+
                   <div className="location">{weather.name}, {weather.sys.country}</div>
+
                   <div className="date">{dateBuilder(new Date())}</div>
+
                 </div>
+
+
                 <div className="weather-box">
+
                   <div className="temp">
+                    
                     {Math.round(weather.main.temp)}°c
+
                   </div>
+
+
                   <div className="weather">{weather.weather[0].main}</div>
+
                 </div>
+
               </div>
               ) : ('')}
             </main>
           </div>
         );
-    
     
   }
 
@@ -76,19 +92,3 @@ import { useState } from 'react';
 
 export default App;
 
-// return (
-
-//   <div>
-//       <nav>
-//         <ul>
-//           {/* <li>
-//             <Link to="Home">Home</Link>
-//         </li> */}
-//         <li>
-//             <Link to="Weather">Weather App</Link>
-//         </li>
-//         </ul>
-//     </nav>
-    
-//     </div>
-// );
